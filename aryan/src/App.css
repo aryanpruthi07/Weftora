@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+    --background: #fefefe;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
+    --primary: #2d2d2d;
+    --primary-foreground: #f8f8f8;
+    --secondary: #f5f5f5;
+    --secondary-foreground: #2d2d2d;
+    --muted: #f5f5f5;
+    --muted-foreground: #6b6b6b;
+    --accent: #f5f5f5;
+    --accent-foreground: #2d2d2d;
+    --destructive: #dc2626;
+    --destructive-foreground: #fef2f2;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #9ca3af;
+    --radius: 0.625rem;
+}
+
+.dark {
+    --background: #1a1a1a;
+    --foreground: #f8f8f8;
+    --card: #1a1a1a;
+    --card-foreground: #f8f8f8;
+    --popover: #1a1a1a;
+    --popover-foreground: #f8f8f8;
+    --primary: #f8f8f8;
+    --primary-foreground: #2d2d2d;
+    --secondary: #2d2d2d;
+    --secondary-foreground: #f8f8f8;
+    --muted: #2d2d2d;
+    --muted-foreground: #9ca3af;
+    --accent: #2d2d2d;
+    --accent-foreground: #f8f8f8;
+    --destructive: #dc2626;
+    --destructive-foreground: #fef2f2;
+    --border: #2d2d2d;
+    --input: #2d2d2d;
+    --ring: #6b7280;
+}
+
+* {
+    border-color: var(--border);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Inter", sans-serif;
+}
+
+.font-serif {
+    font-family: "Playfair Display", serif;
+}
+
+.font-sans {
+    font-family: "Inter", sans-serif;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+}
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s linear infinite;
+}
+
+/* Enhanced button styles */
+.shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom utility classes */
+.text-balance {
+    text-wrap: balance;
+}
+
+.text-pretty {
+    text-wrap: pretty;
+}
+
+/* Color utilities */
+.bg-background {
+    background-color: var(--background);
+}
+
+.bg-foreground {
+    background-color: var(--foreground);
+}
+
+.bg-card {
+    background-color: var(--card);
+}
+
+.bg-card-foreground {
+    background-color: var(--card-foreground);
+}
+
+.bg-popover {
+    background-color: var(--popover);
+}
+
+.bg-popover-foreground {
+    background-color: var(--popover-foreground);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-primary-foreground {
+    background-color: var(--primary-foreground);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.bg-secondary-foreground {
+    background-color: var(--secondary-foreground);
+}
+
+.bg-muted {
+    background-color: var(--muted);
+}
+
+.bg-muted-foreground {
+    background-color: var(--muted-foreground);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+.bg-accent-foreground {
+    background-color: var(--accent-foreground);
+}
+
+.bg-destructive {
+    background-color: var(--destructive);
+}
+
+.bg-destructive-foreground {
+    background-color: var(--destructive-foreground);
+}
+
+.bg-border {
+    background-color: var(--border);
+}
+
+.bg-input {
+    background-color: var(--input);
+}
+
+.bg-ring {
+    background-color: var(--ring);
+}
+
+.text-background {
+    color: var(--background);
+}
+
+.text-foreground {
+    color: var(--foreground);
+}
+
+.text-card {
+    color: var(--card);
+}
+
+.text-card-foreground {
+    color: var(--card-foreground);
+}
+
+.text-popover {
+    color: var(--popover);
+}
+
+.text-popover-foreground {
+    color: var(--popover-foreground);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-primary-foreground {
+    color: var(--primary-foreground);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-secondary-foreground {
+    color: var(--secondary-foreground);
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+.text-muted-foreground {
+    color: var(--muted-foreground);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.text-accent-foreground {
+    color: var(--accent-foreground);
+}
+
+.text-destructive {
+    color: var(--destructive);
+}
+
+.text-destructive-foreground {
+    color: var(--destructive-foreground);
+}
+
+.text-border {
+    color: var(--border);
+}
+
+.text-input {
+    color: var(--input);
+}
+
+.text-ring {
+    color: var(--ring);
+}
+
+.border-background {
+    border-color: var(--background);
+}
+
+.border-foreground {
+    border-color: var(--foreground);
+}
+
+.border-card {
+    border-color: var(--card);
+}
+
+.border-card-foreground {
+    border-color: var(--card-foreground);
+}
+
+.border-popover {
+    border-color: var(--popover);
+}
+
+.border-popover-foreground {
+    border-color: var(--popover-foreground);
+}
+
+.border-primary {
+    border-color: var(--primary);
+}
+
+.border-primary-foreground {
+    border-color: var(--primary-foreground);
+}
+
+.border-secondary {
+    border-color: var(--secondary);
+}
+
+.border-secondary-foreground {
+    border-color: var(--secondary-foreground);
+}
+
+.border-muted {
+    border-color: var(--muted);
+}
+
+.border-muted-foreground {
+    border-color: var(--muted-foreground);
+}
+
+.border-accent {
+    border-color: var(--accent);
+}
+
+.border-accent-foreground {
+    border-color: var(--accent-foreground);
+}
+
+.border-destructive {
+    border-color: var(--destructive);
+}
+
+.border-destructive-foreground {
+    border-color: var(--destructive-foreground);
+}
+
+.border-border {
+    border-color: var(--border);
+}
+
+.border-input {
+    border-color: var(--input);
+}
+
+.border-ring {
+    border-color: var(--ring);
+}
+
+/* Ring utilities */
+.ring-offset-background {
+    --tw-ring-offset-color: var(--background);
+}
+
+.ring-ring {
+    --tw-ring-color: var(--ring);
+}
+
+/* Focus styles */
+.focus-visible\:outline-none:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.focus-visible\:ring-2:focus-visible {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus-visible\:ring-ring:focus-visible {
+    --tw-ring-color: var(--ring);
+}
+
+.focus-visible\:ring-offset-2:focus-visible {
+    --tw-ring-offset-width: 2px;
+}
+
+/* Disabled states */
+.disabled\:opacity-50:disabled {
+    opacity: 0.5;
+}
+
+.disabled\:pointer-events-none:disabled {
+    pointer-events: none;
+}
+
+/* Ensure form controls inside cards and popovers are fully opaque and readable */
+.card-form-control,
+.card-form-control input,
+.card-form-control select,
+.card-form-control textarea {
+    background-color: var(--card);
+    color: var(--foreground);
+    border-color: var(--border);
+}
+
+/* Make the custom select content particularly high contrast */
+.select-solid-bg {
+    background-color: var(--card) !important;
+    color: var(--foreground) !important;
+}
+
+/* Hover states */
+.hover\:bg-primary\/90:hover {
+    background-color: rgb(from var(--primary) r g b / 0.9);
+}
+
+.hover\:bg-secondary\/80:hover {
+    background-color: rgb(from var(--secondary) r g b / 0.8);
+}
+
+.hover\:bg-accent:hover {
+    background-color: var(--accent);
+}
+
+.hover\:text-accent-foreground:hover {
+    color: var(--accent-foreground);
+}
+
+.hover\:text-primary:hover {
+    color: var(--primary);
+}
+
+.hover\:text-primary-foreground:hover {
+    color: var(--primary-foreground);
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+    transform: scale(1.1);
+}
+
+.hover\:-translate-y-2:hover {
+    transform: translateY(-0.5rem);
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Group hover states */
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+}
+
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+.group:hover .group-hover\:text-primary {
+    color: var(--primary);
+}
+
+/* Transition utilities */
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.duration-200 {
+    transition-duration: 200ms;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+.duration-500 {
+    transition-duration: 500ms;
+}
+
+.duration-700 {
+    transition-duration: 700ms;
+}
+
+.duration-1000 {
+    transition-duration: 1000ms;
+}
+
+/* Animation delays */
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-800 {
+    animation-delay: 800ms;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}
+
+/* Backdrop blur */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
