@@ -89,7 +89,7 @@ const InquirySection = () => {
                                                     <SelectItem value="towels">Premium Towels</SelectItem>
                                                     <SelectItem value="bath-mats">Bath Mats</SelectItem>
                                                     <SelectItem value="cushion-covers">Cushion Covers</SelectItem>
-                                                    <SelectItem value="throws">Throws</SelectItem>
+                                                    <SelectItem value="throws">Bedding</SelectItem>
                                                     <SelectItem value="all">All Products</SelectItem>
                                                     <SelectItem value="custom">Custom Requirements</SelectItem>
                                                 </SelectContent>
