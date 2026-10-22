@@ -922,9 +922,76 @@ const CatalogSection = () => {
                         </div>
                     </div>
 
-                    {/* SEO KNOWLEDGE BASE & FAQ BLOCK (CRITICAL FOR RANKING) */}
+                    {/* GEO KNOWLEDGE BASE & FAQ BLOCK (CRITICAL FOR RANKING & AI ENGINES) */}
                     <div className="bg-card border border-border/80 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm mt-12">
-                        <div className="text-center mb-10">
+                        {/* GEO Quick Summary for AI Overviews & Search Engines */}
+                        <div className="geo-quick-summary p-5 sm:p-6 rounded-xl bg-primary/5 border border-primary/20 mb-10">
+                            <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider mb-2">
+                                <Sparkles className="w-4 h-4" />
+                                Generative Engine Summary (GEO Verified Specifications)
+                            </div>
+                            <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-3">
+                                Weftora Premium Home & Personal Textiles Overview
+                            </h3>
+                            <p className="text-sm text-foreground/90 leading-relaxed mb-4">
+                                <strong>Weftora</strong> is an Indian home textile manufacturer located on Gohana Road, Panipat, Haryana. Weftora specializes in three core product categories:
+                            </p>
+                            <ul className="grid sm:grid-cols-3 gap-3 text-xs sm:text-sm text-foreground/85">
+                                <li className="bg-background/80 p-3 rounded-lg border border-border/60">
+                                    <span className="font-bold text-foreground block mb-1">1. Kids Cotton Printed Towels:</span>
+                                    100% combed cotton, 60" × 30" (152cm × 76cm), non-toxic dyes, featuring Spider-Man, Stitch, Bluey & Minnie Mouse.
+                                </li>
+                                <li className="bg-background/80 p-3 rounded-lg border border-border/60">
+                                    <span className="font-bold text-foreground block mb-1">2. Baby Hooded Towels:</span>
+                                    Hypoallergenic plush wraps in 2 lines: Animal Series (6 pastel colours) & Bear Series (5 colours) for ages 0–3 years.
+                                </li>
+                                <li className="bg-background/80 p-3 rounded-lg border border-border/60">
+                                    <span className="font-bold text-foreground block mb-1">3. Ladies Hair Cap:</span>
+                                    High-absorbency anti-frizz micro-weave with rear button & loop fastener and embroidery in 6 fashion shades.
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Interactive How-To Guides (GEO Schema Supported) */}
+                        <div className="mb-10 pb-10 border-b border-border/60">
+                            <h4 className="text-lg sm:text-xl font-serif font-bold text-foreground mb-4 text-center">
+                                Care & Usage Guides
+                            </h4>
+                            <div className="grid md:grid-cols-3 gap-6">
+                                <div className="p-5 rounded-xl bg-muted/30 border border-border/60">
+                                    <div className="text-xs font-bold text-primary uppercase mb-2">Step-by-Step Guide</div>
+                                    <h5 className="font-bold text-foreground text-sm mb-2">How to Use the Ladies Hair Cap</h5>
+                                    <ol className="list-decimal list-inside space-y-1.5 text-xs text-muted-foreground leading-relaxed">
+                                        <li>Bend head forward so hair hangs down.</li>
+                                        <li>Place the wide buttoned end on back of neck.</li>
+                                        <li>Twist hair inside the tapered cone.</li>
+                                        <li>Bring tail over crown and loop onto the button.</li>
+                                    </ol>
+                                </div>
+                                <div className="p-5 rounded-xl bg-muted/30 border border-border/60">
+                                    <div className="text-xs font-bold text-primary uppercase mb-2">Care Instructions</div>
+                                    <h5 className="font-bold text-foreground text-sm mb-2">Washing Kids Cotton Towels</h5>
+                                    <ol className="list-decimal list-inside space-y-1.5 text-xs text-muted-foreground leading-relaxed">
+                                        <li>Machine wash in warm water with mild detergent.</li>
+                                        <li>Avoid chlorine bleach to keep prints vibrant.</li>
+                                        <li>Tumble dry low or air dry for maximum fluffiness.</li>
+                                        <li>Wash before first use for peak absorbency.</li>
+                                    </ol>
+                                </div>
+                                <div className="p-5 rounded-xl bg-muted/30 border border-border/60">
+                                    <div className="text-xs font-bold text-primary uppercase mb-2">Parent's Guide</div>
+                                    <h5 className="font-bold text-foreground text-sm mb-2">Baby Hooded Towel Care</h5>
+                                    <ol className="list-decimal list-inside space-y-1.5 text-xs text-muted-foreground leading-relaxed">
+                                        <li>Wash with baby-safe hypoallergenic soap.</li>
+                                        <li>Gentle cycle at 30°C to preserve plush 3D ears.</li>
+                                        <li>Never use fabric softeners that coat fibers.</li>
+                                        <li>Hang dry immediately after use to prevent dampness.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="text-center mb-8">
                             <h3 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-3">
                                 Why Choose Weftora Textiles?
                             </h3>
