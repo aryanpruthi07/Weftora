@@ -21,12 +21,23 @@ const Navigation = () => {
     }, [])
 
     const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId)
+        const idMap = {
+            'home': 'hero',
+            'catalogue': 'catalog',
+            'wholesale': 'wholesale',
+            'products': 'products',
+            'inquiry': 'inquiry',
+            'contact': 'contact'
+        }
+        const targetId = idMap[sectionId.toLowerCase()] || sectionId.toLowerCase()
+        const element = document.getElementById(targetId)
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' })
             setIsMobileMenuOpen(false)
         }
     }
+
+    const navItems = ['Home', 'About', 'Catalogue', 'Wholesale', 'Products', 'Inquiry', 'Contact']
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-background/95 backdrop-blur-sm border-b border-border' : 'bg-transparent'}`}>
@@ -40,17 +51,17 @@ const Navigation = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6 ml-auto">
-                    {['Home', 'About', 'Catalogue', 'Products', 'Inquiry', 'Contact'].map((item, index) => (
+                <div className="hidden md:flex items-center space-x-1 lg:space-x-3 xl:space-x-5 ml-auto">
+                    {navItems.map((item, index) => (
                         <Button
                             key={item}
-                            onClick={() => scrollToSection(item.toLowerCase() === 'home' ? 'hero' : item.toLowerCase() === 'catalogue' ? 'catalog' : item.toLowerCase())}
-                            variant={isScrolled ? 'ghost' : 'nav'}
+                            onClick={() => scrollToSection(item)}
+                            variant={item === 'Wholesale' ? 'default' : (isScrolled ? 'ghost' : 'nav')}
                             size="sm"
-                            className={`text-xs lg:text-sm xl:text-base font-medium backdrop-blur-md transition-all duration-500 px-2 lg:px-3 xl:px-4 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
+                            className={`text-xs lg:text-sm font-medium transition-all duration-500 px-2 lg:px-3 ${item === 'Wholesale' ? 'bg-primary text-primary-foreground font-semibold shadow-sm hover:bg-primary/90' : 'backdrop-blur-md'} ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
                             style={{ transitionDelay: `${(index + 2) * 100}ms` }}
                         >
-                            {item}
+                            {item === 'Wholesale' ? '⚡ Wholesale' : item}
                         </Button>
                     ))}
                 </div>
@@ -71,13 +82,13 @@ const Navigation = () => {
                 {isMobileMenuOpen && (
                     <div className="md:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-md border-t border-border shadow-lg" >
                         <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-1">
-                            {['Home', 'About', 'Catalogue', 'Products', 'Inquiry', 'Contact'].map((item) => (
+                            {navItems.map((item) => (
                                 <button
                                     key={item}
-                                    onClick={() => scrollToSection(item.toLowerCase() === 'home' ? 'hero' : item.toLowerCase() === 'catalogue' ? 'catalog' : item.toLowerCase())}
-                                    className="block w-full text-left px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
+                                    onClick={() => scrollToSection(item)}
+                                    className={`block w-full text-left px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base font-medium rounded-lg transition-all duration-200 ${item === 'Wholesale' ? 'bg-primary/10 text-primary font-bold' : 'text-foreground hover:text-primary hover:bg-primary/5'}`}
                                 >
-                                    {item}
+                                    {item === 'Wholesale' ? '⚡ Wholesale & Bulk Orders' : item}
                                 </button>
                             ))}
                         </div>
