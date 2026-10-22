@@ -175,10 +175,14 @@ export const SelectItem = ({ children, value, handleSelect }) => (
 export const Logo = () => (
     <div className="flex items-center">
         <img
-            src="/logo.png"
-            alt="Weftora"
+            src="/logo.webp"
+            alt="Weftora - Premium Textiles"
             className="w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-24 lg:w-35 lg:h-25 object-contain"
             loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="140"
+            height="100"
         />
     </div>
 )

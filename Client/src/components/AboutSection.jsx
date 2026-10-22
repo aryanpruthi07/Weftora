@@ -54,7 +54,7 @@ const AboutSection = () => {
                         <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                             <div className="relative">
                                 <div className="relative aspect-[4/5] bg-gradient-to-br from-muted to-card rounded-2xl overflow-hidden">
-                                    <img src="/about.jpeg" alt="Artisan crafting premium textiles" className="w-full h-full object-cover" />
+                                    <img src="/about.webp" alt="Artisan crafting premium textiles" className="w-full h-full object-cover" loading="lazy" decoding="async" />
                                     <div className="absolute inset-0 bg-black/30 mix-blend-multiply"></div>
                                 </div>
                                 <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>

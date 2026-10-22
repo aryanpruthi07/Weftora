@@ -29,7 +29,7 @@ const HeroSection = () => {
     const scrollToProducts = () => scrollToSection('catalog')
 
     return (
-        <section id="hero" className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundImage: "url('/main-page.jpeg')" }}>
+        <section id="hero" className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundImage: "url('/main-page.webp')" }}>
             <div className="absolute inset-0 bg-black/40">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-black/40">
                     <div className="absolute inset-0 opacity-20">

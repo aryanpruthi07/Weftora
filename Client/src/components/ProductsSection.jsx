@@ -14,7 +14,7 @@ const ProductsSection = () => {
             name: 'Premium Towels',
             description: 'Crafted from the finest cotton yarns for unmatched softness and absorbency.',
             features: ['100% Pure Cotton', 'Quick Dry Texture', 'Fade Resistant', 'Multiple Sizes'],
-            image: '/collection/collection4.jpeg',
+            image: '/collection/collection4.webp',
             category: 'towels'
         },
         {
@@ -22,7 +22,7 @@ const ProductsSection = () => {
             name: 'Bath Mats',
             description: 'Woven to blend comfort, durability, and style for your everyday routine.',
             features: ['Plush Cotton Pile', 'Anti-Slip Backing', 'Quick Dry', 'Easy Maintenance'],
-            image: '/collection/collection2.jpeg',
+            image: '/collection/collection2.webp',
             category: 'bath-mats'
         },
         {
@@ -30,7 +30,7 @@ const ProductsSection = () => {
             name: 'Cushion Covers',
             description: 'Designed to add texture and warmth, creating effortless elegance in every space.',
             features: ['Premium Fabrics', 'Hidden Zipper', 'Easy Care', 'Timeless Designs'],
-            image: '/collection/collection3.jpeg',
+            image: '/collection/collection3.webp',
             category: 'cushion-covers'
         },
         {
@@ -38,7 +38,7 @@ const ProductsSection = () => {
             name: 'Bedding',
             description: 'Thoughtfully crafted bedding that brings soft luxury and restful comfort to your nights.',
             features: ['Complete Comfort', 'Soft & Breathable', 'Easy Maintenance', 'Elegant Patterns'],
-            image: '/collection/collection1.jpeg',
+            image: '/collection/collection1.webp',
             category: 'bedding'
         },
     ]
@@ -79,7 +79,7 @@ const ProductsSection = () => {
                             >
                                 <CardContent className="p-0">
                                     <div className="relative overflow-hidden rounded-t-lg aspect-square">
-                                        <img src={product.image || '/placeholder.svg'} alt={product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                        <img src={product.image || '/placeholder.svg'} alt={product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
                                         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                         <div className={`absolute inset-0 bg-primary/90 flex items-center justify-center transition-all duration-300 ${hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'}`}>
                                             <Button onClick={scrollToInquiry} variant="secondary" size="sm" className="bg-background text-foreground hover:bg-background/90">Inquire Now</Button>

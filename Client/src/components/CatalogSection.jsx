@@ -44,7 +44,7 @@ export const CATALOG_PRODUCTS = {
                 name: 'Spider-Man Action Cotton Towel',
                 character: 'Spider-Man',
                 color: 'Vibrant Blue & Red',
-                image: '/catalog/items/cartoon_spiderman.png',
+                image: '/catalog/items/cartoon_spiderman.webp',
                 badge: 'Best Seller',
                 dimensions: '60" x 30"',
                 fabric: '100% Pure Cotton',
@@ -54,7 +54,7 @@ export const CATALOG_PRODUCTS = {
                 name: 'Stitch Galactic Cotton Towel',
                 character: 'Stitch',
                 color: 'Aqua Blue & Striped Accent',
-                image: '/catalog/items/cartoon_stitch.png',
+                image: '/catalog/items/cartoon_stitch.webp',
                 badge: 'Trending',
                 dimensions: '60" x 30"',
                 fabric: '100% Pure Cotton',
@@ -64,7 +64,7 @@ export const CATALOG_PRODUCTS = {
                 name: 'Bluey & Bingo Playtime Cotton Towel',
                 character: 'Bluey & Bingo',
                 color: 'Sky Blue & Sunlight Ochre',
-                image: '/catalog/items/cartoon_bluey.png',
+                image: '/catalog/items/cartoon_bluey.webp',
                 badge: 'Kids Favorite',
                 dimensions: '60" x 30"',
                 fabric: '100% Pure Cotton',
@@ -74,7 +74,7 @@ export const CATALOG_PRODUCTS = {
                 name: 'Minnie Mouse "Smile" Cotton Towel',
                 character: 'Minnie Mouse',
                 color: 'Pastel Yellow & Candy Pink',
-                image: '/catalog/items/cartoon_minnie.png',
+                image: '/catalog/items/cartoon_minnie.webp',
                 badge: 'Classic Cute',
                 dimensions: '60" x 30"',
                 fabric: '100% Pure Cotton',
@@ -102,12 +102,12 @@ export const CATALOG_PRODUCTS = {
             subtitle: 'Ultra-soft hooded wraps with cute animal faces',
             colors: ['Purple', 'Pink', 'Grey', 'Beige', 'Mint Green', 'Blue'],
             items: [
-                { name: 'Animal Hooded Towel - Purple', color: 'Purple', image: '/catalog/items/animal_purple.png', bgHex: '#9333ea' },
-                { name: 'Animal Hooded Towel - Pink', color: 'Pink', image: '/catalog/items/animal_pink.png', bgHex: '#ec4899' },
-                { name: 'Animal Hooded Towel - Grey', color: 'Grey', image: '/catalog/items/animal_grey.png', bgHex: '#6b7280' },
-                { name: 'Animal Hooded Towel - Beige', color: 'Beige', image: '/catalog/items/animal_beige.png', bgHex: '#d4b996' },
-                { name: 'Animal Hooded Towel - Mint Green', color: 'Mint Green', image: '/catalog/items/animal_mint.png', bgHex: '#10b981' },
-                { name: 'Animal Hooded Towel - Blue', color: 'Blue', image: '/catalog/items/animal_blue.png', bgHex: '#3b82f6' }
+                { name: 'Animal Hooded Towel - Purple', color: 'Purple', image: '/catalog/items/animal_purple.webp', bgHex: '#9333ea' },
+                { name: 'Animal Hooded Towel - Pink', color: 'Pink', image: '/catalog/items/animal_pink.webp', bgHex: '#ec4899' },
+                { name: 'Animal Hooded Towel - Grey', color: 'Grey', image: '/catalog/items/animal_grey.webp', bgHex: '#6b7280' },
+                { name: 'Animal Hooded Towel - Beige', color: 'Beige', image: '/catalog/items/animal_beige.webp', bgHex: '#d4b996' },
+                { name: 'Animal Hooded Towel - Mint Green', color: 'Mint Green', image: '/catalog/items/animal_mint.webp', bgHex: '#10b981' },
+                { name: 'Animal Hooded Towel - Blue', color: 'Blue', image: '/catalog/items/animal_blue.webp', bgHex: '#3b82f6' }
             ]
         },
         bearSeries: {
@@ -115,11 +115,11 @@ export const CATALOG_PRODUCTS = {
             subtitle: 'Cuddly bear-eared hooded towels, soft and absorbent',
             colors: ['Blue', 'Brown', 'Grey', 'Mint Green', 'Pink'],
             items: [
-                { name: 'Bear Hooded Towel - Blue', color: 'Blue', image: '/catalog/items/bear_blue.png', bgHex: '#2563eb' },
-                { name: 'Bear Hooded Towel - Brown', color: 'Brown', image: '/catalog/items/bear_brown.png', bgHex: '#854d0e' },
-                { name: 'Bear Hooded Towel - Grey', color: 'Grey', image: '/catalog/items/bear_grey.png', bgHex: '#4b5563' },
-                { name: 'Bear Hooded Towel - Mint Green', color: 'Mint Green', image: '/catalog/items/bear_mint.png', bgHex: '#059669' },
-                { name: 'Bear Hooded Towel - Pink', color: 'Pink', image: '/catalog/items/bear_pink.png', bgHex: '#db2777' }
+                { name: 'Bear Hooded Towel - Blue', color: 'Blue', image: '/catalog/items/bear_blue.webp', bgHex: '#2563eb' },
+                { name: 'Bear Hooded Towel - Brown', color: 'Brown', image: '/catalog/items/bear_brown.webp', bgHex: '#854d0e' },
+                { name: 'Bear Hooded Towel - Grey', color: 'Grey', image: '/catalog/items/bear_grey.webp', bgHex: '#4b5563' },
+                { name: 'Bear Hooded Towel - Mint Green', color: 'Mint Green', image: '/catalog/items/bear_mint.webp', bgHex: '#059669' },
+                { name: 'Bear Hooded Towel - Pink', color: 'Pink', image: '/catalog/items/bear_pink.webp', bgHex: '#db2777' }
             ]
         }
     },
@@ -140,22 +140,22 @@ export const CATALOG_PRODUCTS = {
         ],
         colors: ['Coral Pink', 'Maroon', 'Raspberry', 'Blue', 'Orange', 'Brown'],
         items: [
-            { name: 'Ladies Hair Cap - Coral Pink', color: 'Coral Pink', image: '/catalog/items/hair_coral_pink.png', embroidery: 'Floral Accent', bgHex: '#f43f5e' },
-            { name: 'Ladies Hair Cap - Maroon', color: 'Maroon', image: '/catalog/items/hair_maroon.png', embroidery: 'Rainbow Star', bgHex: '#881337' },
-            { name: 'Ladies Hair Cap - Raspberry', color: 'Raspberry', image: '/catalog/items/hair_raspberry.png', embroidery: 'Sweet Berry', bgHex: '#be185d' },
-            { name: 'Ladies Hair Cap - Blue', color: 'Blue', image: '/catalog/items/hair_blue.png', embroidery: 'Crescent Moon', bgHex: '#1d4ed8' },
-            { name: 'Ladies Hair Cap - Orange', color: 'Orange', image: '/catalog/items/hair_orange.png', embroidery: 'So Cool Citrus', bgHex: '#ea580c' },
-            { name: 'Ladies Hair Cap - Brown', color: 'Brown', image: '/catalog/items/hair_brown.png', embroidery: 'Cute Pup', bgHex: '#713f12' }
+            { name: 'Ladies Hair Cap - Coral Pink', color: 'Coral Pink', image: '/catalog/items/hair_coral_pink.webp', embroidery: 'Floral Accent', bgHex: '#f43f5e' },
+            { name: 'Ladies Hair Cap - Maroon', color: 'Maroon', image: '/catalog/items/hair_maroon.webp', embroidery: 'Rainbow Star', bgHex: '#881337' },
+            { name: 'Ladies Hair Cap - Raspberry', color: 'Raspberry', image: '/catalog/items/hair_raspberry.webp', embroidery: 'Sweet Berry', bgHex: '#be185d' },
+            { name: 'Ladies Hair Cap - Blue', color: 'Blue', image: '/catalog/items/hair_blue.webp', embroidery: 'Crescent Moon', bgHex: '#1d4ed8' },
+            { name: 'Ladies Hair Cap - Orange', color: 'Orange', image: '/catalog/items/hair_orange.webp', embroidery: 'So Cool Citrus', bgHex: '#ea580c' },
+            { name: 'Ladies Hair Cap - Brown', color: 'Brown', image: '/catalog/items/hair_brown.webp', embroidery: 'Cute Pup', bgHex: '#713f12' }
         ]
     }
 }
 
 const CATALOG_PAGES = [
-    { page: 1, title: 'Cover & Catalogue Index', image: '/catalog/page_1.png' },
-    { page: 2, title: 'Baby Animal Hooded Towels (6 Colours)', image: '/catalog/page_2.png' },
-    { page: 3, title: 'Bear Hooded Towels (5 Colours)', image: '/catalog/page_3.png' },
-    { page: 4, title: 'Ladies Hair Towels / Hair Cap (6 Colours)', image: '/catalog/page_4.png' },
-    { page: 5, title: 'Kids Cartoon Printed Towels (60" x 30")', image: '/catalog/page_5.png' }
+    { page: 1, title: 'Cover & Catalogue Index', image: '/catalog/page_1.webp' },
+    { page: 2, title: 'Baby Animal Hooded Towels (6 Colours)', image: '/catalog/page_2.webp' },
+    { page: 3, title: 'Bear Hooded Towels (5 Colours)', image: '/catalog/page_3.webp' },
+    { page: 4, title: 'Ladies Hair Towels / Hair Cap (6 Colours)', image: '/catalog/page_4.webp' },
+    { page: 5, title: 'Kids Cartoon Printed Towels (60" x 30")', image: '/catalog/page_5.webp' }
 ]
 
 const SPECIFICATIONS_TABLE = [
@@ -419,6 +419,7 @@ const CatalogSection = () => {
                                                     alt={`Kids cotton printed towel with ${item.character} design 60x30 inch`}
                                                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                                     loading="lazy"
+                                                    decoding="async"
                                                 />
                                                 <div className="absolute top-3 left-3 bg-foreground/90 backdrop-blur-sm text-background text-[11px] font-semibold px-2.5 py-1 rounded-full">
                                                     {item.badge}
@@ -534,6 +535,7 @@ const CatalogSection = () => {
                                                         alt={`Baby animal hooded towel in ${item.color} colour`}
                                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                                         loading="lazy"
+                                                        decoding="async"
                                                     />
                                                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                                         <Maximize2 className="w-5 h-5 text-white" />
@@ -612,6 +614,7 @@ const CatalogSection = () => {
                                                         alt={`Bear hooded baby towel in ${item.color} colour`}
                                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                                         loading="lazy"
+                                                        decoding="async"
                                                     />
                                                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                                         <Maximize2 className="w-5 h-5 text-white" />
@@ -709,6 +712,7 @@ const CatalogSection = () => {
                                                     alt={`Ladies hair cap quick dry towel in ${item.color} colour with embroidery`}
                                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                                     loading="lazy"
+                                                    decoding="async"
                                                 />
                                                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                                     <Maximize2 className="w-5 h-5 text-white" />
@@ -833,6 +837,8 @@ const CatalogSection = () => {
                                             src={CATALOG_PAGES[activePageViewer].image}
                                             alt={CATALOG_PAGES[activePageViewer].title}
                                             className="w-full h-auto cursor-pointer"
+                                            loading="lazy"
+                                            decoding="async"
                                             onClick={() => setModalImage(CATALOG_PAGES[activePageViewer].image)}
                                         />
                                         <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur-md px-4 py-2.5 rounded-lg flex items-center justify-between shadow-lg">
@@ -873,7 +879,7 @@ const CatalogSection = () => {
                                                     activePageViewer === idx ? 'border-primary shadow-md scale-105' : 'border-border/60 opacity-60 hover:opacity-100'
                                                 }`}
                                             >
-                                                <img src={page.image} alt={page.title} className="w-full h-full object-cover" />
+                                                <img src={page.image} alt={page.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                                                 <div className="absolute inset-x-0 bottom-0 bg-black/70 text-white text-[9px] text-center py-0.5 font-medium">
                                                     P. {page.page}
                                                 </div>
