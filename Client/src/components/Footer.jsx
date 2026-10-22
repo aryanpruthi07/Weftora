@@ -13,23 +13,36 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
-                            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
-                                {['Home', 'About Us', 'Products', 'Contact'].map((item) => (
-                                    <li key={item}>
-                                        <button onClick={() => document.getElementById(item === 'Home' ? 'hero' : item.toLowerCase().replace(' us', ''))?.scrollIntoView({ behavior: 'smooth' })} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">
-                                            {item}
-                                        </button>
-                                    </li>
-                                ))}
+                            <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Product Lines</h4>
+                            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-primary-foreground/80">
+                                <li>
+                                    <button onClick={() => document.getElementById('kids-cotton-towels')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary-foreground transition-colors duration-200">
+                                        Kids Cotton Printed Towels
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onClick={() => document.getElementById('baby-hooded-towels')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary-foreground transition-colors duration-200">
+                                        Baby Hooded Towels
+                                    </button>
+                                </li>
+                                <li>
+                                    <button onClick={() => document.getElementById('ladies-hair-cap')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary-foreground transition-colors duration-200">
+                                        Ladies Hair Cap & Wraps
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="/catalog/weftora-catalogue.pdf" download="Weftora-Product-Catalogue.pdf" className="hover:text-primary-foreground transition-colors duration-200 underline">
+                                        Download PDF Catalogue
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact Info</h4>
                             <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-primary-foreground/80">
-                                <p>Gohana Road, Panipat</p>
-                                <p><a href="tel:+917404970065" className="hover:text-primary-foreground transition-colors duration-200 break-words">+91 7404970065</a></p>
+                                <p>Gohana Road, Panipat, Haryana</p>
+                                <p><a href="tel:+919817660065" className="hover:text-primary-foreground transition-colors duration-200 break-words">+91 9817660065</a> / <a href="tel:+917404970065" className="hover:text-primary-foreground transition-colors duration-200 break-words">+91 7404970065</a></p>
                                 <p><a href="mailto:weftora@gmail.com" className="hover:text-primary-foreground transition-colors duration-200 break-words">weftora@gmail.com</a></p>
                                 <p><a href="https://weftora.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors duration-200">weftora.com</a></p>
                             </div>

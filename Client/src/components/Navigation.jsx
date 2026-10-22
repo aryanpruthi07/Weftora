@@ -41,10 +41,10 @@ const Navigation = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6 ml-auto">
-                    {['Home', 'About', 'Products', 'Inquiry', 'Contact'].map((item, index) => (
+                    {['Home', 'About', 'Catalogue', 'Products', 'Inquiry', 'Contact'].map((item, index) => (
                         <Button
                             key={item}
-                            onClick={() => scrollToSection(item.toLowerCase() === 'home' ? 'hero' : item.toLowerCase())}
+                            onClick={() => scrollToSection(item.toLowerCase() === 'home' ? 'hero' : item.toLowerCase() === 'catalogue' ? 'catalog' : item.toLowerCase())}
                             variant={isScrolled ? 'ghost' : 'nav'}
                             size="sm"
                             className={`text-xs lg:text-sm xl:text-base font-medium backdrop-blur-md transition-all duration-500 px-2 lg:px-3 xl:px-4 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
@@ -71,10 +71,10 @@ const Navigation = () => {
                 {isMobileMenuOpen && (
                     <div className="md:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-md border-t border-border shadow-lg" >
                         <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-1">
-                            {['Home', 'About', 'Products', 'Inquiry', 'Contact'].map((item) => (
+                            {['Home', 'About', 'Catalogue', 'Products', 'Inquiry', 'Contact'].map((item) => (
                                 <button
                                     key={item}
-                                    onClick={() => scrollToSection(item.toLowerCase() === 'home' ? 'hero' : item.toLowerCase())}
+                                    onClick={() => scrollToSection(item.toLowerCase() === 'home' ? 'hero' : item.toLowerCase() === 'catalogue' ? 'catalog' : item.toLowerCase())}
                                     className="block w-full text-left px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
                                 >
                                     {item}

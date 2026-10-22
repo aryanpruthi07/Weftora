@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://weftora.com/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://weftora.com/catalog/items/cartoon_spiderman.png</image:loc>
+      <image:title>Kids Cotton Printed Towels - 60x30 inch Cartoon Characters</image:title>
+      <image:caption>100% Cotton kids printed towels featuring Spider-Man, Bluey, Stitch, and Minnie Mouse</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://weftora.com/catalog/items/animal_pink.png</image:loc>
+      <image:title>Baby Animal Hooded Towels</image:title>
+      <image:caption>Ultra-soft baby hooded towels with cute animal faces in 6 pastel colors</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://weftora.com/catalog/items/bear_blue.png</image:loc>
+      <image:title>Baby Bear Hooded Towels</image:title>
+      <image:caption>Cuddly bear-eared baby hooded towels, ultra soft and absorbent</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://weftora.com/catalog/items/hair_coral_pink.png</image:loc>
+      <image:title>Ladies Hair Cap and Quick-Dry Hair Towels</image:title>
+      <image:caption>Quick dry ladies hair wrap cap with button closure and cute embroidery</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://weftora.com/catalog/page_1.png</image:loc>
+      <image:title>Weftora Official Product Catalogue</image:title>
+      <image:caption>Weftora product catalogue for baby hooded towels, kids cartoon towels, and ladies hair wraps</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://weftora.com/#catalog</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weftora.com/#kids-cotton-towels</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weftora.com/#baby-hooded-towels</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weftora.com/#ladies-hair-cap</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weftora.com/catalog/weftora-catalogue.pdf</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

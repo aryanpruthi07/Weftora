@@ -21,10 +21,12 @@ const HeroSection = () => {
         }
     }, [])
 
-    const scrollToProducts = () => {
-        const element = document.getElementById('products')
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id)
         if (element) element.scrollIntoView({ behavior: 'smooth' })
     }
+
+    const scrollToProducts = () => scrollToSection('catalog')
 
     return (
         <section id="hero" className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundImage: "url('/main-page.jpeg')" }}>
@@ -40,22 +42,63 @@ const HeroSection = () => {
             <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div className="space-y-8">
                     <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white/95 text-xs sm:text-sm font-medium mb-4 border border-white/20 shadow-lg">
+                            <span>✨ New Product Catalogue Available</span>
+                        </div>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 sm:mb-6 text-balance drop-shadow-2xl bg-gradient-to-b from-white to-white/90 bg-clip-text animate-pulse-slow">Weftora</h1>
                     </div>
 
                     <div className={`transition-all duration-1000 delay-300 ${contentLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-6 sm:mb-8 font-light text-balance max-w-4xl mx-auto drop-shadow-lg">Weaving Comfort Into Your Home</p>
+                        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 mb-4 sm:mb-6 font-light text-balance max-w-4xl mx-auto drop-shadow-lg">
+                            Baby Hooded Towels • Kids Cotton Printed Towels • Ladies Hair Cap
+                        </p>
                     </div>
 
                     <div className={`transition-all duration-1000 delay-500 ${contentLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                        <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed text-pretty drop-shadow-md px-4">Explore our luxurious home textile collection, designed with precision and care. From soft towels to elegant bedding, we bring comfort, style, and warmth to every corner of your home.</p>
+                        <p className="text-sm sm:text-base lg:text-lg text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed text-pretty drop-shadow-md px-4">
+                            Soft, absorbent, and gentle textiles crafted for babies, kids, and everyday comfort. Explore our complete catalogue manufactured with care in Panipat.
+                        </p>
+                        
+                        {/* Keyword Quick Jump Pills */}
+                        <div className="flex flex-wrap justify-center items-center gap-2 max-w-2xl mx-auto mb-8 px-2">
+                            <button
+                                onClick={() => scrollToSection('kids-cotton-towels')}
+                                className="px-3.5 py-1.5 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur-md text-white text-xs sm:text-sm font-medium transition-all duration-200 border border-white/20 cursor-pointer"
+                            >
+                                🧸 Kids Cotton Printed Towels (60×30)
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('baby-hooded-towels')}
+                                className="px-3.5 py-1.5 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur-md text-white text-xs sm:text-sm font-medium transition-all duration-200 border border-white/20 cursor-pointer"
+                            >
+                                👶 Baby Hooded Towels (Animal & Bear)
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('ladies-hair-cap')}
+                                className="px-3.5 py-1.5 rounded-full bg-white/15 hover:bg-white/30 backdrop-blur-md text-white text-xs sm:text-sm font-medium transition-all duration-200 border border-white/20 cursor-pointer"
+                            >
+                                🌸 Ladies Hair Cap (Quick-Dry)
+                            </button>
+                        </div>
                     </div>
 
                     <div className={`transition-all duration-1000 delay-700 ${contentLoaded ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}`}>
-                        <Button onClick={scrollToProducts} size="lg" className="bg-gradient-to-r from-white/95 to-white/85 hover:from-white hover:to-white/95 text-gray-900 px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold group transition-all duration-300 hover:scale-110 active:scale-95 shadow-2xl hover:shadow-3xl backdrop-blur-sm border border-white/20">
-                            Explore Collection
-                            <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-all duration-300" />
-                        </Button>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                            <button
+                                onClick={scrollToProducts}
+                                className="inline-flex items-center justify-center rounded-lg bg-white hover:bg-neutral-100 text-neutral-950 font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 text-base sm:text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer border border-white/40 group"
+                            >
+                                <span className="text-neutral-950 font-bold">View Catalogue</span>
+                                <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6 text-neutral-950 group-hover:translate-x-2 transition-transform duration-300" />
+                            </button>
+                            <a
+                                href="/catalog/weftora-catalogue.pdf"
+                                download="Weftora-Product-Catalogue.pdf"
+                                className="inline-flex items-center justify-center rounded-lg bg-black/50 hover:bg-black/70 text-white font-semibold border border-white/30 px-6 sm:px-8 py-3.5 sm:py-4 text-base backdrop-blur-md transition-all duration-300 hover:scale-105 shadow-xl"
+                            >
+                                Download PDF Catalogue
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

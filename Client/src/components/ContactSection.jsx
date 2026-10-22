@@ -35,7 +35,11 @@ const ContactSection = () => {
                                 </div>
 
                                 <div className="space-y-4 sm:space-y-6">
-                                    {[{ icon: MapPin, title: 'Address', content: 'Gohana Road, Panipat' }, { icon: Phone, title: 'Phone', content: '+91 7404970065', href: 'tel:+917404970065' }, { icon: Mail, title: 'Email', content: 'weftora@gmail.com', href: 'mailto:weftora@gmail.com' }].map((item, index) => (
+                                    {[
+                                        { icon: MapPin, title: 'Address', content: 'Gohana Road, Panipat, Haryana' },
+                                        { icon: Phone, title: 'Phone / WhatsApp', content: '+91 9817660065 / +91 7404970065', href: 'tel:+919817660065' },
+                                        { icon: Mail, title: 'Email', content: 'weftora@gmail.com', href: 'mailto:weftora@gmail.com' }
+                                    ].map((item, index) => (
                                         <div key={index} className="flex items-start gap-3 sm:gap-4">
                                             <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center"><item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" /></div>
                                             <div className="min-w-0 flex-1">

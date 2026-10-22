@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /catalog/
+Allow: /catalog/*.png
+Allow: /catalog/*.pdf
+Allow: /catalog/items/
+
+Sitemap: https://weftora.com/sitemap.xml

@@ -18,6 +18,20 @@ const InquirySection = () => {
         return () => observer.disconnect()
     }, [])
 
+    useEffect(() => {
+        const handlePreFill = (e) => {
+            if (e.detail) {
+                setFormData(prev => ({
+                    ...prev,
+                    productInterest: e.detail.productInterest || prev.productInterest,
+                    message: e.detail.message || prev.message
+                }))
+            }
+        }
+        window.addEventListener('weftora:inquire', handlePreFill)
+        return () => window.removeEventListener('weftora:inquire', handlePreFill)
+    }, [])
+
     const handleInputChange = (field, value) => setFormData(prev => ({ ...prev, [field]: value }))
 
     const handleSubmit = async (e) => {
@@ -26,7 +40,8 @@ const InquirySection = () => {
         setIsLoading(true)
 
         try {
-            const resp = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/inquiry`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) })
+            const endpoint = (import.meta.env.VITE_SERVER_URL || '').replace(/\/$/, '') + '/api/inquiry'
+            const resp = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) })
             const data = await resp.json()
             if (!resp.ok) {
                 setErrorMessage(data?.error || data?.message || 'Failed to submit inquiry.')
@@ -76,8 +91,8 @@ const InquirySection = () => {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
-                                            <Label htmlFor="phone" className="text-sm font-medium text-foreground">Phone Number</Label>
-                                            <Input id="phone" type="tel" placeholder="Enter your phone number" value={formData.phone} onChange={(e) => handleInputChange('phone', e.target.value)} className="h-12" />
+                                            <Label htmlFor="phone" className="text-sm font-medium text-foreground">Phone Number *</Label>
+                                            <Input id="phone" type="tel" placeholder="Enter your phone number" value={formData.phone} onChange={(e) => handleInputChange('phone', e.target.value)} required className="h-12" />
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="product-interest" className="text-sm font-medium text-foreground">Product Interest</Label>
@@ -86,11 +101,14 @@ const InquirySection = () => {
                                                     <SelectValue placeholder="Select a product category" selectedValue={formData.productInterest} />
                                                 </SelectTrigger>
                                                 <SelectContent>
-                                                    <SelectItem value="towels">Premium Towels</SelectItem>
+                                                    <SelectItem value="kids-cotton-towels">Kids Cotton Printed Towels (60" × 30")</SelectItem>
+                                                    <SelectItem value="baby-hooded-towels">Baby Hooded Towels (Animal & Bear)</SelectItem>
+                                                    <SelectItem value="ladies-hair-cap">Ladies Hair Cap & Quick-Dry Wraps</SelectItem>
+                                                    <SelectItem value="towels">Premium Bath Towels</SelectItem>
                                                     <SelectItem value="bath-mats">Bath Mats</SelectItem>
                                                     <SelectItem value="cushion-covers">Cushion Covers</SelectItem>
-                                                    <SelectItem value="Bedding">Bedding</SelectItem>
-                                                    <SelectItem value="all">All Products</SelectItem>
+                                                    <SelectItem value="Bedding">Bedding Collection</SelectItem>
+                                                    <SelectItem value="catalog-wholesale">Full Catalogue Wholesale Inquiry</SelectItem>
                                                     <SelectItem value="custom">Custom Requirements</SelectItem>
                                                 </SelectContent>
                                             </Select>
