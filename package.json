@@ -1,0 +1,10 @@
+{
+  "name": "weftora",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix Client",
+    "build:client": "npm run build --prefix Client",
+    "dev:client": "npm run dev --prefix Client",
+    "start:server": "npm run start --prefix Server"
+  }
+}
